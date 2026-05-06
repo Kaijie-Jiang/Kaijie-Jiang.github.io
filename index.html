@@ -1,14 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kaijie Jiang</title>
+  <style>
+    :root {
+      --text: #222;
+      --muted: #555;
+      --link: #0057a8;
+      --border: #ddd;
+      --bg: #fff;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", Times, serif;
+      line-height: 1.55;
+      font-size: 17px;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 42px 24px 70px;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      font-size: 34px;
+      font-weight: normal;
+      margin: 0 0 22px;
+    }
+
+    h2 {
+      font-size: 25px;
+      font-weight: normal;
+      margin: 34px 0 14px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 210px;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .intro p {
+      margin-top: 0;
+      margin-bottom: 13px;
+    }
+
+    .profile-photo {
+      width: 210px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 3px;
+      border: 1px solid var(--border);
+      background: #f6f6f6;
+    }
+
+    .contact {
+      margin-top: 8px;
+    }
+
+    .small-note {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .pub {
+      margin: 0 0 18px;
+    }
+
+    .pub-title {
+      font-weight: bold;
+    }
+
+    .pub-authors {
+      margin-top: 2px;
+    }
+
+    .pub-venue {
+      margin-top: 2px;
+      color: var(--muted);
+    }
+
+    .links {
+      white-space: nowrap;
+    }
+
+    .section-list {
+      padding-left: 22px;
+      margin-top: 0;
+    }
+
+    .section-list li {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      margin-top: 42px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        padding: 28px 18px 54px;
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-photo {
+        width: 190px;
+        height: 230px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Kaijie Jiang</h1>
-  <p>PhD student </p>
-  <p>Research interests: lattice-based cryptography, lattice isomorphism, threshold signatures.</p>
-  <p>Email: kjj101110@gmail.com</p>
+  <main class="page">
+    <h1>Kaijie Jiang</h1>
+
+    <section class="intro">
+      <div>
+        <p>
+          I am a Ph.D. student in cryptography at Tsinghua University, advised by
+          Prof. Xiaoyun Wang. My research interests are mainly in post-quantum
+          cryptography, lattice-based cryptography, lattice isomorphism problems,
+          and threshold signatures.
+        </p>
+
+        <p>
+          I have also visited the National University of Singapore, where I worked
+          with Prof. Divesh Aggarwal. Recently, I have been working on the theory
+          and algorithms of the lattice isomorphism problem, as well as adaptively
+          secure lattice-based threshold signatures.
+        </p>
+
+        <p class="contact">
+          Email: <span class="small-note">jkj21 AT mails DOT tsinghua DOT edu DOT cn</span><br />
+          <a href="YOUR_GOOGLE_SCHOLAR_LINK">Google Scholar</a> /
+          <a href="YOUR_EPRINT_LINK">IACR ePrint</a> /
+          <a href="YOUR_GITHUB_LINK">GitHub</a> /
+          <a href="YOUR_CV_PDF_LINK">CV</a>
+        </p>
+      </div>
+
+      <div>
+        <!-- Replace assets/profile.jpg with your own photo. -->
+        <img class="profile-photo" src="assets/profile.jpg" alt="Profile photo of Kaijie Jiang" />
+      </div>
+    </section>
+
+    <h2>Publications</h2>
+
+    <div class="pub">
+      <div class="pub-title">Tweed: Adaptively Secure Lattice-Based Two-Round Threshold Signatures</div>
+      <div class="pub-authors">Kaijie Jiang, Hoeteck Wee, and Chenzhi Zhu</div>
+      <div class="pub-venue"><em>Eurocrypt 2026</em>. <span class="links">[<a href="https://eprint.iacr.org/2026/417">ePrint</a>]</span></div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Oriole: Adaptively Secure Partially Non-Interactive Threshold Signatures from Lattices</div>
+      <div class="pub-authors">Kaijie Jiang, Hoeteck Wee, and Chenzhi Zhu</div>
+      <div class="pub-venue"><em>IACR ePrint 2026/793</em>. <span class="links">[<a href="https://eprint.iacr.org/2026/793">ePrint</a>]</span></div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">[Add your Asiacrypt 2023 paper title here]</div>
+      <div class="pub-authors">[Authors]</div>
+      <div class="pub-venue"><em>Asiacrypt 2023</em>. <span class="links">[<a href="#">paper</a>] [<a href="#">slides</a>]</span></div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">[Add your lattice isomorphism paper title here]</div>
+      <div class="pub-authors">[Authors]</div>
+      <div class="pub-venue"><em>Manuscript</em>. <span class="links">[<a href="#">paper</a>]</span></div>
+    </div>
+
+    <h2>Research Interests</h2>
+    <ul class="section-list">
+      <li>Lattice-based cryptography and post-quantum cryptography.</li>
+      <li>Lattice isomorphism problems, including algorithms, reductions, and complexity.</li>
+      <li>Threshold signatures, multi-signatures, and adaptive security.</li>
+      <li>Cryptographic constructions from group actions and isomorphism problems.</li>
+    </ul>
+
+    <h2>Visits</h2>
+    <ul class="section-list">
+      <li>National University of Singapore, visiting Ph.D. student / research visitor.</li>
+    </ul>
+
+    <h2>Talks</h2>
+    <ul class="section-list">
+      <li><em>Tweed: Adaptively Secure Lattice-Based Two-Round Threshold Signatures</em>, Eurocrypt 2026.</li>
+      <li>[Add other invited talks, workshop talks, or seminar talks here.]</li>
+    </ul>
+
+    <h2>Teaching and Service</h2>
+    <ul class="section-list">
+      <li>[Add teaching assistant experience here.]</li>
+      <li>[Add program committee / external review / conference service here.]</li>
+    </ul>
+
+    <footer>
+      Last updated: May 2026. This website is adapted into a simple academic homepage style and can be hosted by GitHub Pages.
+    </footer>
+  </main>
 </body>
 </html>
