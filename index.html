@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Kaijie Jiang</title>
+
   <style>
     :root {
       --text: #1f2933;
@@ -11,7 +13,6 @@
       --link: #1f5f9f;
       --border: #e5e7eb;
       --bg: #ffffff;
-      --card: #ffffff;
       --soft: #f7f9fc;
       --accent: #234f7e;
     }
@@ -21,7 +22,8 @@
       padding: 0;
       background: var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", sans-serif;
       line-height: 1.62;
       font-size: 16.5px;
       -webkit-font-smoothing: antialiased;
@@ -82,7 +84,7 @@
       border-radius: 10px;
       border: 1px solid var(--border);
       background: #f6f6f6;
-      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.10);
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.1);
     }
 
     .contact {
@@ -101,8 +103,80 @@
 
     .pub {
       margin: 0 0 17px;
-      padding: 0 0 17px
+      padding: 0 0 17px;
+      border-bottom: 1px solid #eef0f3;
+    }
+
+    .pub:last-of-type {
+      border-bottom: none;
+    }
+
+    .pub-title {
+      font-weight: 650;
+      font-size: 17px;
+      color: #111827;
+    }
+
+    .pub-authors {
+      margin-top: 3px;
+      color: #2f3a45;
+    }
+
+    .pub-venue {
+      margin-top: 3px;
+      color: var(--muted);
+    }
+
+    .tag {
+      display: inline-block;
+      margin-left: 7px;
+      padding: 1px 7px;
+      border-radius: 999px;
+      background: #eef5ff;
+      color: var(--accent);
+      font-size: 12.5px;
+      font-weight: 650;
+      vertical-align: 1px;
+    }
+
+    .links {
+      white-space: nowrap;
+    }
+
+    .section-list {
+      padding-left: 22px;
+      margin-top: 0;
+    }
+
+    .section-list li {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      margin-top: 42px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        padding: 30px 18px 54px;
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-photo {
+        width: 220px;
+        height: 260px;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <main class="page">
     <h1>Kaijie Jiang</h1>
@@ -110,60 +184,120 @@
     <section class="intro">
       <div>
         <p>
-          I am a final-year Ph.D. student in cryptography at Tsinghua University, advised by
-          Prof. Xiaoyun Wang. My research interests are mainly in lattice-based cryptography,
-          especially lattice isomorphism problems and threshold signatures.
+          I am a final-year Ph.D. student in cryptography at Tsinghua University,
+          advised by Prof. Xiaoyun Wang. My research interests are mainly in
+          lattice-based cryptography, especially lattice isomorphism problems and
+          threshold signatures.
         </p>
 
         <p>
-          I like problems where algebra, lattices, and cryptographic security proofs meet —
-          preferably with just enough structure to be useful, but not enough to make life too easy.
+          I am interested in problems where algebra, lattices, and cryptographic
+          security proofs meet. Recently, my work has focused on lattice-based
+          threshold signatures, the lattice isomorphism problem, and cryptographic
+          constructions from group actions.
         </p>
 
         <p class="contact">
-          Email: <span class="small-note">jkj21 AT mails DOT tsinghua DOT edu DOT cn</span><br />
+          Email:
+          <span class="small-note">jkj21 AT mails DOT tsinghua DOT edu DOT cn</span>
+          <br />
           <a href="https://iacr.org/cryptodb/data/author.php?authorkey=12653">CryptoDB</a>
         </p>
       </div>
 
       <div>
-        <img class="profile-photo" src="KJ2.jpg" alt="Profile photo of Kaijie Jiang" />
+        <img
+          class="profile-photo"
+          src="KJ2.jpg"
+          alt="Profile photo of Kaijie Jiang"
+        />
       </div>
     </section>
 
     <h2>Publications</h2>
 
     <div class="pub">
-      <div class="pub-title">Tweed: Adaptively Secure Lattice-Based Two-Round Threshold Signatures</div>
-      <div class="pub-authors">Kaijie Jiang, Stefano Tessaro, Hoeteck Wee, and Chenzhi Zhu</div>
-      <div class="pub-venue"><em>Eurocrypt 2026</em>. <span class="links">[<a href="https://eprint.iacr.org/2026/417">ePrint</a>]</span></div>
+      <div class="pub-title">
+        Tweed: Adaptively Secure Lattice-Based Two-Round Threshold Signatures
+      </div>
+      <div class="pub-authors">
+        Kaijie Jiang, Stefano Tessaro, Hoeteck Wee, and Chenzhi Zhu
+      </div>
+      <div class="pub-venue">
+        <em>Eurocrypt 2026</em>.
+        <span class="links">
+          [<a href="https://eprint.iacr.org/2026/417">ePrint</a>]
+        </span>
+      </div>
     </div>
 
     <div class="pub">
-      <div class="pub-title">Oriole: Adaptively Secure Partially Non-Interactive Threshold Signatures from Lattices</div>
-      <div class="pub-authors">Kaijie Jiang, Hoeteck Wee, and Chenzhi Zhu</div>
-      <div class="pub-venue"><em>IACR ePrint 2026/793</em>. <span class="links">[<a href="https://eprint.iacr.org/2026/793">ePrint</a>]</span></div>
+      <div class="pub-title">
+        Oriole: Adaptively Secure Partially Non-Interactive Threshold Signatures
+        from Lattices
+      </div>
+      <div class="pub-authors">
+        Kaijie Jiang, Hoeteck Wee, and Chenzhi Zhu
+      </div>
+      <div class="pub-venue">
+        <em>IACR ePrint 2026/793</em>.
+        <span class="links">
+          [<a href="https://eprint.iacr.org/2026/793">ePrint</a>]
+        </span>
+      </div>
     </div>
 
     <div class="pub">
-      <div class="pub-title">Re-Randomize and Extract: A Novel Commitment Construction Framework Based on Group Actions</div>
-      <div class="pub-authors">Kaijie Jiang, Anyu Wang, Hengyi Luo, Guoxiao Liu, Gang Tang, Yanbin Pan, and Xiaoyun Wang</div>
-      <div class="pub-venue"><em>Eurocrypt 2025</em>. <span class="links">[<a href="https://eprint.iacr.org/2025/400">ePrint</a>]</span></div>
+      <div class="pub-title">
+        Re-Randomize and Extract: A Novel Commitment Construction Framework
+        Based on Group Actions
+      </div>
+      <div class="pub-authors">
+        Kaijie Jiang, Anyu Wang, Hengyi Luo, Guoxiao Liu, Gang Tang, Yanbin Pan,
+        and Xiaoyun Wang
+      </div>
+      <div class="pub-venue">
+        <em>Eurocrypt 2025</em>.
+        <span class="links">
+          [<a href="https://eprint.iacr.org/2025/400">ePrint</a>]
+        </span>
+      </div>
     </div>
 
     <div class="pub">
-      <div class="pub-title">Cryptanalysis of Rank-2 Module-LIP with Symplectic Automorphisms</div>
-      <div class="pub-authors">Hengyi Luo, Kaijie Jiang, Yanbin Pan, and Anyu Wang</div>
-      <div class="pub-venue"><em>Asiacrypt 2024</em>. <span class="links">[<a href="https://eprint.iacr.org/2024/1173">ePrint</a>]</span></div>
+      <div class="pub-title">
+        Cryptanalysis of Rank-2 Module-LIP with Symplectic Automorphisms
+      </div>
+      <div class="pub-authors">
+        Hengyi Luo, Kaijie Jiang, Yanbin Pan, and Anyu Wang
+      </div>
+      <div class="pub-venue">
+        <em>Asiacrypt 2024</em>.
+        <span class="links">
+          [<a href="https://eprint.iacr.org/2024/1173">ePrint</a>]
+        </span>
+      </div>
     </div>
 
     <div class="pub">
-      <div class="pub-title">Exploiting the Symmetry of Z<sup>n</sup>: Randomization and the Automorphism Problem <span class="tag">Best Paper</span></div>
-      <div class="pub-authors">Kaijie Jiang, Anyu Wang, Hengyi Luo, Guoxiao Liu, Yang Yu, and Xiaoyun Wang</div>
-      <div class="pub-venue"><em>Asiacrypt 2023</em>. <span class="links">[<a href="https://eprint.iacr.org/2023/1735">ePrint</a>]</span></div>
+      <div class="pub-title">
+        Exploiting the Symmetry of Z<sup>n</sup>: Randomization and the
+        Automorphism Problem
+        <span class="tag">Best Paper</span>
+      </div>
+      <div class="pub-authors">
+        Kaijie Jiang, Anyu Wang, Hengyi Luo, Guoxiao Liu, Yang Yu, and Xiaoyun Wang
+      </div>
+      <div class="pub-venue">
+        <em>Asiacrypt 2023</em>.
+        <span class="links">
+          [<a href="https://eprint.iacr.org/2023/1735">ePrint</a>]
+        </span>
+      </div>
     </div>
 
     <h2>Research Interests</h2>
+
     <ul class="section-list">
       <li>Lattice-based cryptography and post-quantum cryptography.</li>
       <li>Lattice isomorphism problems: algorithms, reductions, and complexity.</li>
@@ -177,4 +311,3 @@
   </main>
 </body>
 </html>
-
